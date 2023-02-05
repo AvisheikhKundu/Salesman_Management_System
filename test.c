@@ -95,5 +95,37 @@ void Delete(int id)
     while(temp1!=NULL)
     {
 
-        
+       if(temp1->id==id)
+        {
+
+            printf("\t\tRecord with ID number %d Found !!!\n", id);
+
+            if(temp1==temp2)
+            {
+
+                head = head->next;
+                free(temp1);
+            }
+            else
+            {
+                temp2->next = temp1->next;
+                free(temp1);
+            }
+            system("cls");
+            printf("\t\tRecord Successfully Deleted !!!\n");
+            select();
+
+        }
+        temp2=temp1;
+        temp1=temp1->next;
+
+    }
+
+    system("cls");
+    printf("\t\tSeller with ID %d is not found !!!\n", id);
+    select();
+
+}
+void display()
+
 
