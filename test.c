@@ -127,5 +127,25 @@ void Delete(int id)
 
 }
 void display()
+{
+    int i=0;
+    struct Sales_man *temp=head;
+    system("cls");
+    while(temp!=NULL)
+    {
+        i++;
+        printf("\n\t\tID Number: %d", temp->id);
+        printf("\t\tName: %s", temp->name);
+        printf("\t\tPhone: %s", temp->phone);
+        printf("\t\tHour: %d", temp->hour);
+        temp = temp->next;
+
+    }
+    printf("\n\t\tTotal : %d\n\n",i);
+
+    select();
+}
+
+void cover_page()
 
 
