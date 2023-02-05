@@ -52,3 +52,48 @@ void search(int id)
             select();
         }
         temp = temp->next;
+}
+    system("cls");
+    printf("\t\tSeller with ID number %d is not found !!!\n", id);
+    select();
+}
+void update(int id)
+{
+
+    struct Sales_man * temp = head;
+    while(temp!=NULL)
+    {
+
+        if(temp->id==id)
+        {
+            printf("\t\tRecord with roll number %d Found !!!\n\n", id);
+            printf("\t\tEnter new name: ");
+            scanf("%s", temp->name);
+            printf("\t\tEnter new phone number: ");
+            scanf("%s", temp->phone);
+            printf("\t\tEnter new Hour: ");
+            scanf("%d",&temp->hour);
+            system("cls");
+            printf("\t\tUpdated Successful!!!\n");
+            select();
+        }
+        temp = temp->next;
+
+    }
+
+
+    system("cls");
+    printf("\t\tSeller with ID number %d is not found !!!\n", id);
+
+    select();
+
+}
+void Delete(int id)
+{
+    struct Sales_man * temp1 = head;
+    struct Sales_man * temp2 = head;
+    while(temp1!=NULL)
+    {
+
+        
+
