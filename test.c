@@ -147,5 +147,36 @@ void display()
 }
 
 void cover_page()
+{
 
+    system("color f0");
+    printf("\t\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    printf("\n\t\t\t*-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-*");
+    printf("\n\t\t\t############                                                   ############");
+    printf("\n\t\t\t############              Welcome to Salesman Management       ############");
+    printf("\n\t\t\t############                                                   ############");
+    printf("\n\t\t\t*-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-*");
+    printf("\n\t\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    printf("\n\n");
+
+}
+
+void select()
+{
+    int choice;
+    char name[50];
+    char phone[20];
+    int id;
+    int hour;
+    printf("\n\t\t1) Entry new man");
+    printf("\n\t\t2) Search a man");
+    printf("\n\t\t3) Delete a man");
+    printf("\n\t\t4) Update man details");
+    printf("\n\t\t5) Display all man details & Total");
+    printf("\n\t\t6) Exit ");
+    printf("\n\n\t\tEnter your choice: ");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+    
 
