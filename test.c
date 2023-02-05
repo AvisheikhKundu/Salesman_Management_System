@@ -194,5 +194,20 @@ void select()
         scanf("%d", &id);
         search(id);
         break;
-    
+    case 3:
+        printf("\n\t\tEnter ID number to delete: ");
+        scanf("%d", &id);
+        Delete(id);
+        break;
+    case 4:
+        printf("\n\t\tEnter ID number to update: ");
+        scanf("%d", &id);
+        update(id);
+        break;
+    case 5:
+        display();
+        break;
+    case 6:
+        exit(0);
+
 
