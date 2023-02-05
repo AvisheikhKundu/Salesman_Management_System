@@ -52,7 +52,8 @@ void search(int id)
             select();
         }
         temp = temp->next;
-}
+
+    }
     system("cls");
     printf("\t\tSeller with ID number %d is not found !!!\n", id);
     select();
@@ -64,8 +65,10 @@ void update(int id)
     while(temp!=NULL)
     {
 
+
         if(temp->id==id)
         {
+
             printf("\t\tRecord with roll number %d Found !!!\n\n", id);
             printf("\t\tEnter new name: ");
             scanf("%s", temp->name);
@@ -76,6 +79,8 @@ void update(int id)
             system("cls");
             printf("\t\tUpdated Successful!!!\n");
             select();
+
+            
         }
         temp = temp->next;
 
@@ -95,7 +100,7 @@ void Delete(int id)
     while(temp1!=NULL)
     {
 
-       if(temp1->id==id)
+        if(temp1->id==id)
         {
 
             printf("\t\tRecord with ID number %d Found !!!\n", id);
@@ -168,6 +173,8 @@ void select()
     char phone[20];
     int id;
     int hour;
+
+
     printf("\n\t\t1) Entry new man");
     printf("\n\t\t2) Search a man");
     printf("\n\t\t3) Delete a man");
@@ -176,6 +183,8 @@ void select()
     printf("\n\t\t6) Exit ");
     printf("\n\n\t\tEnter your choice: ");
     scanf("%d",&choice);
+
+
     switch(choice)
     {
     case 1:
@@ -209,5 +218,22 @@ void select()
         break;
     case 6:
         exit(0);
+    default:
+        system("cls");
+        printf("\n\t\tINVAILD INPUT");
+        printf("\n\t\tTry Again\n\n");
+        select();
+    }
+
+}
 
 
+
+
+int main()
+{
+    cover_page();
+    head = NULL;
+    select();
+
+}
