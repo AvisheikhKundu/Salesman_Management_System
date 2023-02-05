@@ -178,5 +178,21 @@ void select()
     scanf("%d",&choice);
     switch(choice)
     {
+    case 1:
+        printf("\n\t\tEnter Seller ID: ");
+        scanf("%d", &id);
+        printf("\n\t\tEnter name: ");
+        scanf("%s", name);
+        printf("\n\t\tEnter Contact number: ");
+        scanf("%s", phone);
+        printf("\n\t\tEnter working hour: ");
+        scanf("%d", &hour);
+        insert(id, name, phone, hour);
+        break;
+    case 2:
+        printf("\n\t\tEnter ID Number to search: ");
+        scanf("%d", &id);
+        search(id);
+        break;
     
 
